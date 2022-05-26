@@ -20,7 +20,8 @@
   }
   
   .btn:active {
-    transform: scale(0.97);
+    box-shadow: inset 7px 7px 25px #a1a1a1,
+    inset -7px -7px 25px #ffffff;
   }
   
   .save {

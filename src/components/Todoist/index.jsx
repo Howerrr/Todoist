@@ -36,7 +36,7 @@ const Todoist = () => {
   const addTask = (task) => {
     const id = nanoid()
     const newTask = { id, ...task }
-    setTasks([newTask, ...tasks])
+    setTasks([...tasks, newTask])
   }
 
   const deleteTask = (id) => {
@@ -59,7 +59,15 @@ const Todoist = () => {
         {showAdd && <AddTask addTask={addTask} />}
         {tasks.length > 0 ?
           (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
-          ('No Tasks')}
+          (<div style={{
+            display: 'flex', height: '80%', fontSize: '28px',
+            justifyContent: 'center', alignItems: 'center'
+          }}>
+            <div>
+              No Tasks
+            </div>
+          </div>
+          )}
       </div>
     </>
   );

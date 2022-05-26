@@ -5,14 +5,14 @@
   background: #d4d4d4;
   margin: 30px 5px;
   padding: 10px 20px;
-  transition: all .3s ease-in-out;
   border-radius: 10px;
   box-shadow: 7px 7px 20px #a1a1a1,
   -7px -7px 20px #ffffff;
 }
 
 .task:hover {
-  transform: scale(1.02);
+  background: #c5c4c4;
+  transition: 0.2s ease-in-out;
 }
 
 .task.reminder {
