@@ -10,6 +10,10 @@ const AddTask = ({ onAdd }) => {
             alert('No Content')
             return
         }
+        if (!day) {
+            alert('No Time')
+            return
+        }
         onAdd({ text, day, reminder })
         setText('')
         setDay('')
@@ -21,17 +25,21 @@ const AddTask = ({ onAdd }) => {
             <div className='form-control'>
                 <label >Task</label>
                 <input type="text" placeholder='Add Task'
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Add Task'}
                     value={text}
                     onChange={(e) => setText(e.target.value)} />
             </div>
             <div className='form-control'>
-                <label >Day & Time</label>
-                <input type="text" placeholder='Add Day & Time'
+                <label >Note</label>
+                <input type="text" placeholder='Add Note'
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Add Note'}
                     value={day}
                     onChange={(e) => setDay(e.target.value)} />
             </div>
             <div className='form-control-check'>
-                <label >Set Reminder</label>
+                <label >Mark it important</label>
                 <input type="checkbox" value={reminder}
                     checked={reminder}
                     onChange={(e) => setReminder(e.currentTarget.checked)} />

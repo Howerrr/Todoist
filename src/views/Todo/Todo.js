@@ -11,13 +11,23 @@ const Todo = () => {
       {
         id: 1,
         text: 'Learn React',
-        day: '2021 | 11 | 13'
+        day: '5.26 19:00'
       },
       {
         id: 2,
-        text: 'Review data structure',
-        day: '2021 | 11 | 14'
+        text: 'Play LOL',
+        day: '5.26 19:05'
       },
+      {
+        id: 3,
+        text: 'Code on Leetcode',
+        day: '5.26 22:25'
+      },
+      {
+        id: 4,
+        text: 'Play CS:GO',
+        day: '5.26 22:30'
+      }
     ]
   )
 
@@ -41,7 +51,7 @@ const Todo = () => {
       <Header
         title="Todoist"
         onClick={() => setShowAdd(!showAdd)}
-        cardName='Arrange my day'
+        cardName='Arrange'
       />
       {showAdd && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ?
