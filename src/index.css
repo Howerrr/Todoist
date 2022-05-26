@@ -31,30 +31,6 @@ body {
 
 }
 
-.form-control {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-}
-
-.form-control label {
-  margin-bottom: 2px;
-  margin-left: 12px;
-}
-
-.form-control input {
-  outline: none;
-  height: 40px;
-  margin: 5px;
-  padding: 5px 16px;
-  font-size: 17px;
-  background: #d4d4d4;
-  border-radius: 10px;
-  border: none;
-  box-shadow: inset 7px 7px 25px #c0bfbf,
-  inset -7px -7px 25px #ffffff;
-}
-
 .innerbox::-webkit-scrollbar {
   width: 5px;    
 }

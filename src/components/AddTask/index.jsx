@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import './index.css'
+
 const AddTask = ({ onAdd }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')

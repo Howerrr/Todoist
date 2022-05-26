@@ -1,8 +1,9 @@
-import Header from "../../components/basic/Header";
-import Tasks from "../../components/todo/Tasks";
-import AddTask from "../../components/todo/AddTask";
-import './index.css'
 import { useState } from 'react'
+import Header from "../Header";
+import Tasks from "../Tasks";
+import AddTask from "../AddTask";
+import './index.css'
+
 
 const Todo = () => {
   const [showAdd, setShowAdd] = useState(false)
