@@ -1,7 +1,7 @@
 {
+  "homepage": ".",
   "name": "retodo",
   "version": "0.1.0",
-  "homepage": "https://hower454516977.github.io/retodo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "backend": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://github.com/Hower454516977/Retodo.git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
