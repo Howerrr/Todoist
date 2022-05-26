@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.20253991.chunk.css",
-    "main.js": "/static/js/main.f3bf81bb.chunk.js",
-    "main.js.map": "/static/js/main.f3bf81bb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.80c12252.js",
-    "runtime-main.js.map": "/static/js/runtime-main.80c12252.js.map",
-    "static/js/2.0d536cf4.chunk.js": "/static/js/2.0d536cf4.chunk.js",
-    "static/js/2.0d536cf4.chunk.js.map": "/static/js/2.0d536cf4.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.20253991.chunk.css.map": "/static/css/main.20253991.chunk.css.map",
-    "static/js/2.0d536cf4.chunk.js.LICENSE.txt": "/static/js/2.0d536cf4.chunk.js.LICENSE.txt"
+    "main.css": "/Retodo/static/css/main.20253991.chunk.css",
+    "main.js": "/Retodo/static/js/main.f3bf81bb.chunk.js",
+    "main.js.map": "/Retodo/static/js/main.f3bf81bb.chunk.js.map",
+    "runtime-main.js": "/Retodo/static/js/runtime-main.5ecc39e1.js",
+    "runtime-main.js.map": "/Retodo/static/js/runtime-main.5ecc39e1.js.map",
+    "static/js/2.0d536cf4.chunk.js": "/Retodo/static/js/2.0d536cf4.chunk.js",
+    "static/js/2.0d536cf4.chunk.js.map": "/Retodo/static/js/2.0d536cf4.chunk.js.map",
+    "index.html": "/Retodo/index.html",
+    "static/css/main.20253991.chunk.css.map": "/Retodo/static/css/main.20253991.chunk.css.map",
+    "static/js/2.0d536cf4.chunk.js.LICENSE.txt": "/Retodo/static/js/2.0d536cf4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.80c12252.js",
+    "static/js/runtime-main.5ecc39e1.js",
     "static/js/2.0d536cf4.chunk.js",
     "static/css/main.20253991.chunk.css",
     "static/js/main.f3bf81bb.chunk.js"
