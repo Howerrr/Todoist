@@ -5,7 +5,7 @@ const Header = ({ title, onClick, cardName }) => {
     return (
         <header className='header'>
             <h1>{title}</h1>
-            <Button color='black'
+            <Button 
                 text={cardName}
                 onClick={onClick} />
         </header>
