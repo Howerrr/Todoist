@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { nanoid } from 'nanoid';
+import './index.css'
 import Header from "../Header";
 import Tasks from "../Tasks";
 import AddTask from "../AddTask";
-import './index.css'
 
 
-const Todo = () => {
+const Todoist = () => {
   const [showAdd, setShowAdd] = useState(false)
   const [tasks, setTasks] = useState(
     [
@@ -33,9 +34,9 @@ const Todo = () => {
   )
 
   const addTask = (task) => {
-    const id = Math.floor(Math.random() * 10000) + 1
+    const id = nanoid()
     const newTask = { id, ...task }
-    setTasks([...tasks, newTask])
+    setTasks([newTask, ...tasks])
   }
 
   const deleteTask = (id) => {
@@ -49,19 +50,19 @@ const Todo = () => {
 
   return (
     <>
-      <Header
-        title="Todoist"
-        onClick={() => setShowAdd(!showAdd)}
-        cardName='Arrange'
-      />
-      {showAdd && <AddTask onAdd={addTask} />}
-      {tasks.length > 0 ?
-        (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
-        ('No Tasks')}
+      <div className="container innerbox">
+        <Header
+          title="Todoist"
+          onClick={() => setShowAdd(!showAdd)}
+          cardName='Arrange'
+        />
+        {showAdd && <AddTask addTask={addTask} />}
+        {tasks.length > 0 ?
+          (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
+          ('No Tasks')}
+      </div>
     </>
-
-
   );
 }
 
-export default Todo;
+export default Todoist;

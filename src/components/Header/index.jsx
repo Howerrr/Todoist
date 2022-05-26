@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Button from '../Button'
+import './index.css'
 
 const Header = ({ title, onClick, cardName }) => {
     return (
@@ -13,7 +14,7 @@ const Header = ({ title, onClick, cardName }) => {
 }
 
 Header.defaultProps = {
-    title: 'Task Tracker'
+    title: 'Todoist'
 }
 
 Header.propTypes = {

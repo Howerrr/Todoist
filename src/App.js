@@ -1,12 +1,10 @@
-import Todo from "./components/Todo";
+import Todoist from "./components/Todoist";
 
 const App = () => {
   return (
     <>
       <div className="home-page">
-        <div className="container innerbox">
-          <Todo></Todo>
-        </div>
+        <Todoist />
       </div>
     </>
   );
