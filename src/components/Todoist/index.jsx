@@ -59,7 +59,7 @@ const Todoist = () => {
         {showAdd && <AddTask addTask={addTask} />}
         {tasks.length > 0 ?
           (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
-          (<div style={{
+          (!showAdd && <div style={{
             display: 'flex', height: '80%', fontSize: '28px',
             justifyContent: 'center', alignItems: 'center'
           }}>
