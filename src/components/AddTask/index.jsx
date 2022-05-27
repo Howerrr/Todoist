@@ -8,11 +8,11 @@ const AddTask = ({ addTask }) => {
     const onSubmit = (e) => {
         e.preventDefault()
         if (!text) {
-            alert('No Content')
+            alert('Please input task.')
             return
         }
         if (!day) {
-            alert('No Time')
+            alert('Please input time.')
             return
         }
         addTask({ text, day })
@@ -24,13 +24,13 @@ const AddTask = ({ addTask }) => {
         <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label >Task</label>
-                <input type="text" 
+                <input type="text"
                     value={text}
                     onChange={(e) => setText(e.target.value)} />
             </div>
             <div className='form-control'>
-                <label >Note</label>
-                <input type="text" 
+                <label >Time</label>
+                <input type="text"
                     value={day}
                     onChange={(e) => setDay(e.target.value)} />
             </div>

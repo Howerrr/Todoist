@@ -22,7 +22,7 @@
   }
 
   .btn:active {
-    color: rgb(135, 135, 135);
+    color: rgb(192, 192, 192);
     box-shadow: inset 7px 7px 25px #a1a1a1,
       inset -7px -7px 25px #ffffff;
   }
