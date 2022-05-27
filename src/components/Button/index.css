@@ -1,7 +1,7 @@
   .btn {
     display: inline-block;
-    background: linear-gradient(to left top,#c8c8c8,#f0f0f0);
-    color: #000;
+    background: linear-gradient(to left top, #c8c8c8, #f0f0f0);
+    color: rgb(111, 111, 111);
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -9,21 +9,24 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
     font-family: inherit;
+    transition: all 0.05s ease-in-out;
     box-shadow: 7px 7px 25px #a1a1a1,
-    -7px -7px 25px #ffffff;
+      -7px -7px 25px #ffffff;
 
   }
-  
+
   .btn:focus {
     outline: none;
   }
-  
+
   .btn:active {
+    color: rgb(135, 135, 135);
     box-shadow: inset 7px 7px 25px #a1a1a1,
-    inset -7px -7px 25px #ffffff;
+      inset -7px -7px 25px #ffffff;
   }
-  
+
   .save {
     display: flex;
     height: 60px;
@@ -32,4 +35,3 @@
   .btn-save {
     flex-grow: 1;
   }
-  

@@ -5,3 +5,11 @@
   margin-bottom: 20px;
 }
 
+.title {
+  user-select: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.title:hover {
+  color: rgb(99, 99, 99);
+}

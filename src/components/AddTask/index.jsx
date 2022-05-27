@@ -24,17 +24,13 @@ const AddTask = ({ addTask }) => {
         <form className='add-form' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label >Task</label>
-                <input type="text" placeholder='Add Task'
-                    onFocus={(e) => e.target.placeholder = ''}
-                    onBlur={(e) => e.target.placeholder = 'Add Task'}
+                <input type="text" 
                     value={text}
                     onChange={(e) => setText(e.target.value)} />
             </div>
             <div className='form-control'>
                 <label >Note</label>
-                <input type="text" placeholder='Add Note'
-                    onFocus={(e) => e.target.placeholder = ''}
-                    onBlur={(e) => e.target.placeholder = 'Add Note'}
+                <input type="text" 
                     value={day}
                     onChange={(e) => setDay(e.target.value)} />
             </div>

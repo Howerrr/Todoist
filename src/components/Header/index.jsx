@@ -5,8 +5,8 @@ import './index.css'
 const Header = ({ title, onClick, cardName }) => {
     return (
         <header className='header'>
-            <h1>{title}</h1>
-            <Button 
+            <h1 className='title'>{title}</h1>
+            <Button
                 text={cardName}
                 onClick={onClick} />
         </header>

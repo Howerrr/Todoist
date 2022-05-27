@@ -12,6 +12,7 @@
 .form-control label {
   margin-bottom: 2px;
   margin-left: 12px;
+  user-select: none;
 }
 
 .form-control input {
