@@ -10,7 +10,7 @@ const Task = ({ task, onDelete, onToggle }) => {
                 <p style={{ marginTop: '4px', fontSize: '14px' }}>{task.day}</p>
             </div>
             <FaTimes
-                style={{ color: 'rgba(0,0,0,0.6)', cursor: 'pointer' }}
+                className='faTimes'
                 onClick={() => onDelete(task)} />
         </div>
     )

@@ -7,12 +7,25 @@
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 7px 7px 20px #a1a1a1,
-  -7px -7px 20px #ffffff;
+    -7px -7px 20px #ffffff;
 }
 
 .task:hover {
   background: #c5c4c4;
-  transition: 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.faTimes {
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.task:hover .faTimes {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .task.reminder {
