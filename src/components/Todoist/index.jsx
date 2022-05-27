@@ -5,47 +5,48 @@ import Header from "../Header";
 import Tasks from "../Tasks";
 import AddTask from "../AddTask";
 
-
 const Todoist = () => {
   const [showAdd, setShowAdd] = useState(false)
-  const [tasks, setTasks] = useState(
-    [
-      {
-        id: 1,
-        text: 'Learn React',
-        day: '5.26 19:00'
-      },
-      {
-        id: 2,
-        text: 'Play LOL',
-        day: '5.26 19:05'
-      },
-      {
-        id: 3,
-        text: 'Code on Leetcode',
-        day: '5.26 22:25'
-      },
-      {
-        id: 4,
-        text: 'Play CS:GO',
-        day: '5.26 22:30'
-      }
-    ]
-  )
+  const [tasks, setTasks] = useState([])
+
+  const loadAll = () => {
+    let allTasks = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      let oneTask = localStorage.getItem(key);
+      allTasks = [...allTasks, JSON.parse(oneTask)]
+    }
+    setTasks(allTasks)
+  }
 
   const addTask = (task) => {
     const id = nanoid()
-    const newTask = { id, ...task }
-    setTasks([...tasks, newTask])
+    localStorage.setItem(id, JSON.stringify({
+      id: id,
+      text: task.text,
+      day: task.day,
+      important: false
+    }))
+    loadAll()
   }
 
-  const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id))
+  const deleteTask = (task) => {
+    localStorage.removeItem(task.id);
+    loadAll()
   }
 
-  const toggleTask = (id) => {
-    setTasks(tasks.map((task) => task.id === id ?
-      { ...task, reminder: !task.reminder } : task))
+  const toggleTask = (task) => {
+    localStorage.setItem(task.id, JSON.stringify({
+      id: task.id,
+      text: task.text,
+      day: task.day,
+      important: !task.important
+    }))
+    loadAll()
+  }
+
+  window.onload = function() {
+    loadAll()
   }
 
   return (
@@ -53,7 +54,7 @@ const Todoist = () => {
       <div className="container innerbox">
         <Header
           title="Todoist"
-          onClick={() => setShowAdd(!showAdd)}
+          onClick={() => { setShowAdd(!showAdd) }}
           cardName='Arrange'
         />
         {showAdd && <AddTask addTask={addTask} />}

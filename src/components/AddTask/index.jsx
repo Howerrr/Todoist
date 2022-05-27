@@ -4,6 +4,7 @@ import './index.css'
 const AddTask = ({ addTask }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
+    const important = false
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -15,7 +16,7 @@ const AddTask = ({ addTask }) => {
             alert('No Time')
             return
         }
-        addTask({ text, day })
+        addTask({ text, day, important})
         setText('')
         setDay('')
     }
