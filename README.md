@@ -1,2 +1,0 @@
-# Retodo
-todoist by React
