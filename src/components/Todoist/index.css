@@ -1,6 +1,6 @@
 .container {
   height: 80vh;
-  width: 50%;
+  min-width: 50%;
   margin: 40px auto;
   overflow: auto;
   min-height: 300px;

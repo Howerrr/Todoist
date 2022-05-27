@@ -8,6 +8,7 @@
 .title {
   user-select: none;
   transition: all 0.1s ease-in-out;
+  margin-right: 32px;
 }
 
 .title:hover {

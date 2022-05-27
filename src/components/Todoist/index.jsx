@@ -66,7 +66,7 @@ const Todoist = () => {
             display: 'flex', height: '80%', fontSize: '28px',
             justifyContent: 'center', alignItems: 'center'
           }}>
-            <div>
+            <div style={{ userSelect: 'none' }}>
               No Tasks
             </div>
           </div>
