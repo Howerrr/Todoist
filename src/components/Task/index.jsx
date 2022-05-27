@@ -3,7 +3,7 @@ import './index.css'
 
 const Task = ({ task, onDelete, onToggle }) => {
     return (
-        <div className={`task ${JSON.parse(localStorage.getItem(task.id)).important ? 'reminder' : ''}`}
+        <div className={`task ${JSON.parse(localStorage.getItem('#' + task.id)).important ? 'reminder' : ''}`}
             onDoubleClick={() => onToggle(task)}>
             <div>
                 <h3>{task.text}</h3>

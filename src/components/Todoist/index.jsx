@@ -13,15 +13,17 @@ const Todoist = () => {
     let allTasks = [];
     for (let i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
-      let oneTask = localStorage.getItem(key);
-      allTasks = [...allTasks, JSON.parse(oneTask)]
+      if (key.charAt(0) === '#') {
+        let oneTask = localStorage.getItem(key);
+        allTasks = [...allTasks, JSON.parse(oneTask)]
+      }
     }
     setTasks(allTasks)
   }
 
   const addTask = (task) => {
     const id = nanoid()
-    localStorage.setItem(id, JSON.stringify({
+    localStorage.setItem('#' + id, JSON.stringify({
       id: id,
       text: task.text,
       day: task.day,
@@ -31,12 +33,12 @@ const Todoist = () => {
   }
 
   const deleteTask = (task) => {
-    localStorage.removeItem(task.id);
+    localStorage.removeItem('#' + task.id);
     loadAll()
   }
 
   const toggleTask = (task) => {
-    localStorage.setItem(task.id, JSON.stringify({
+    localStorage.setItem('#' + task.id, JSON.stringify({
       id: task.id,
       text: task.text,
       day: task.day,
@@ -45,7 +47,7 @@ const Todoist = () => {
     loadAll()
   }
 
-  window.onload = function() {
+  window.onload = function () {
     loadAll()
   }
 

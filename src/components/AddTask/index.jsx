@@ -4,7 +4,6 @@ import './index.css'
 const AddTask = ({ addTask }) => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
-    const important = false
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -16,7 +15,7 @@ const AddTask = ({ addTask }) => {
             alert('No Time')
             return
         }
-        addTask({ text, day, important})
+        addTask({ text, day })
         setText('')
         setDay('')
     }
@@ -39,12 +38,6 @@ const AddTask = ({ addTask }) => {
                     value={day}
                     onChange={(e) => setDay(e.target.value)} />
             </div>
-            {/* <div className='form-control-check'>
-                <label >Mark it important</label>
-                <input type="checkbox" value={reminder}
-                    checked={reminder}
-                    onChange={(e) => setReminder(e.currentTarget.checked)} />
-            </div> */}
             <div className='save'>
                 <input type="submit" value='Save Task' className='btn btn-save' />
             </div>
