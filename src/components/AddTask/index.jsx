@@ -3,17 +3,20 @@ import './index.css'
 
 const AddTask = ({ addTask }) => {
     const [text, setText] = useState('')
-    const [day, setDay] = useState('')
+    let [day, setDay] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault()
         if (!text) {
-            alert('Please input task.')
+            alert('Please input a title')
             return
         }
-        if (!day) {
-            alert('Please input time.')
-            return
+        let days = day.split(' ')
+        if (days.length !== 4) {
+            alert('You can input the time with format of "month day hour minute"\nEg. "5 29 22 31"\nIt will be save as "5-29 22:31"')
+        }
+        else {
+            day = days[0] + '-' + days[1] + ' ' + days[2] + ':' + days[3]
         }
         addTask({ text, day })
         setText('')
