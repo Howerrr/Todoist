@@ -3,7 +3,7 @@ import './index.css'
 
 const AddTask = ({ addTask }) => {
     const [text, setText] = useState('')
-    let [day, setDay] = useState('')
+    let [note, setNote] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -11,16 +11,13 @@ const AddTask = ({ addTask }) => {
             alert('Please input a title')
             return
         }
-        let days = day.split(' ')
-        if (days.length !== 4) {
-            alert('You can input the time with format of "month day hour minute"\nEg. "5 29 22 31"\nIt will be save as "5-29 22:31"')
+        let day = note.split(' ')
+        if (day.length === 4) {
+            note = day[0] + '-' + day[1] + ' ' + day[2] + ':' + day[3]
         }
-        else {
-            day = days[0] + '-' + days[1] + ' ' + days[2] + ':' + days[3]
-        }
-        addTask({ text, day })
+        addTask({ text, note })
         setText('')
-        setDay('')
+        setNote('')
     }
 
     return (
@@ -34,8 +31,8 @@ const AddTask = ({ addTask }) => {
             <div className='form-control'>
                 <label >Time</label>
                 <input type="text"
-                    value={day}
-                    onChange={(e) => setDay(e.target.value)} />
+                    value={note}
+                    onChange={(e) => setNote(e.target.value)} />
             </div>
             <div className='save'>
                 <input type="submit" value='Save Task' className='btn btn-save' />

@@ -7,7 +7,7 @@ const Task = ({ task, onDelete, onToggle }) => {
             onDoubleClick={() => onToggle(task)}>
             <div>
                 <h3>{task.text}</h3>
-                <p style={{ marginTop: '4px', fontSize: '14px' }}>{task.day}</p>
+                <p style={{ marginTop: '4px', fontSize: '14px' }}>{task.note}</p>
             </div>
             <FaTimes
                 className='faTimes'

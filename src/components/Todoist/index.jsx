@@ -26,7 +26,7 @@ const Todoist = () => {
     localStorage.setItem('#' + id, JSON.stringify({
       id: id,
       text: task.text,
-      day: task.day,
+      note: task.note,
       important: false
     }))
     loadAll()
@@ -41,7 +41,7 @@ const Todoist = () => {
     localStorage.setItem('#' + task.id, JSON.stringify({
       id: task.id,
       text: task.text,
-      day: task.day,
+      note: task.note,
       important: !task.important
     }))
     loadAll()
