@@ -2,9 +2,8 @@ import PropTypes from 'prop-types'
 import './index.css'
 
 const Button = ({ text, onClick }) => {
-
     return (
-        <button onClick={onClick} className='btn'>
+        <button onClick={onClick} className='btn headbtn'>
             {text}
         </button>
     )

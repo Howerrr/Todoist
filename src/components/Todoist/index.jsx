@@ -9,7 +9,7 @@ const Todoist = () => {
   const [showAdd, setShowAdd] = useState(false)
   const [tasks, setTasks] = useState([])
   const [fold, setFold] = useState(true)
-
+ 
   const loadAll = () => {
     let allTasks = [];
     for (let i = 0; i < localStorage.length; i++) {
@@ -55,29 +55,25 @@ const Todoist = () => {
   window.onload = function () {
     loadAll()
   }
-
+  
   return (
-    <>
-      <div className="container innerbox">
-        <Header
-          title="Todoist"
-          onClick={() => { setShowAdd(!showAdd) ; setFold(!fold)}}
-          cardName={fold ? 'Arrange' : 'Fold'}
-        />
-        {showAdd && !fold && <AddTask addTask={addTask} />}
-        {tasks.length > 0 ?
-          (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
-          (!showAdd && <div style={{
-            display: 'flex', height: '80%', fontSize: '28px',
-            justifyContent: 'center', alignItems: 'center'
-          }}>
-            <div style={{ userSelect: 'none' }}>
-              No Tasks
-            </div>
-          </div>
-          )}
-      </div>
-    </>
+    <div className="todoist innerbox" >
+      <Header
+        title="Todoist"
+        onClick={() => { setShowAdd(!showAdd); setFold(!fold) }}
+        cardName={fold ? 'Arrange' : 'Fold'}
+      />
+      {showAdd && !fold && <AddTask addTask={addTask} />}
+      {tasks.length > 0 ?
+        (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
+        (!showAdd && <div style={{
+          display: 'flex', height: '75%', fontSize: '100px', opacity: '0.1',
+          justifyContent: 'center', alignItems: 'center', userSelect: 'none'
+        }}>    
+            No Tasks
+        </div>
+        )}
+    </div>
   );
 }
 

@@ -30,7 +30,7 @@ const AddTask = ({ addTask }) => {
                     onChange={(e) => setText(e.target.value)} />
             </div>
             <div className='form-control'>
-                <label >Time</label>
+                <label >Note</label>
                 <input type="text"
                     value={note}
                     onChange={(e) => setNote(e.target.value)} />

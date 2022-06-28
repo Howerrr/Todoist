@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 
-.home-page {
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;

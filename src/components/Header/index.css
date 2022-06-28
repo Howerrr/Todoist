@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
@@ -7,10 +8,22 @@
 
 .title {
   user-select: none;
+  color: rgb(22, 22, 22);
   transition: all 0.1s ease-in-out;
-  margin-right: 32px;
 }
 
 .title:hover {
   color: rgb(99, 99, 99);
+}
+
+.headbtn {
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.todoist:hover .headbtn {
+  opacity: 1;  
+  pointer-events: all;
+  cursor: pointer;
 }
