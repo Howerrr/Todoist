@@ -1,5 +1,6 @@
   .btn {
     display: inline-block;
+    width: 100px;
     background: linear-gradient(to left top, #c8c8c8, #f0f0f0);
     color: rgb(111, 111, 111);
     border: none;

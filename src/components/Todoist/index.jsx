@@ -8,6 +8,7 @@ import AddTask from "../AddTask";
 const Todoist = () => {
   const [showAdd, setShowAdd] = useState(false)
   const [tasks, setTasks] = useState([])
+  const [fold, setFold] = useState(true)
 
   const loadAll = () => {
     let allTasks = [];
@@ -29,6 +30,10 @@ const Todoist = () => {
       note: task.note,
       important: false
     }))
+    if (task.fold) {
+      setFold(!fold)
+      setShowAdd(!showAdd)
+    }
     loadAll()
   }
 
@@ -56,10 +61,10 @@ const Todoist = () => {
       <div className="container innerbox">
         <Header
           title="Todoist"
-          onClick={() => { setShowAdd(!showAdd) }}
-          cardName='Arrange'
+          onClick={() => { setShowAdd(!showAdd) ; setFold(!fold)}}
+          cardName={fold ? 'Arrange' : 'Fold'}
         />
-        {showAdd && <AddTask addTask={addTask} />}
+        {showAdd && !fold && <AddTask addTask={addTask} />}
         {tasks.length > 0 ?
           (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
           (!showAdd && <div style={{

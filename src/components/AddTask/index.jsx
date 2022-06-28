@@ -4,6 +4,7 @@ import './index.css'
 const AddTask = ({ addTask }) => {
     const [text, setText] = useState('')
     let [note, setNote] = useState('')
+    let fold = true
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -15,7 +16,7 @@ const AddTask = ({ addTask }) => {
         if (day.length === 4) {
             note = day[0] + '-' + day[1] + ' ' + day[2] + ':' + day[3]
         }
-        addTask({ text, note })
+        addTask({ text, note, fold})
         setText('')
         setNote('')
     }
