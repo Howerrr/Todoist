@@ -67,10 +67,10 @@ const Todoist = () => {
       {tasks.length > 0 ?
         (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleTask} />) :
         (!showAdd && <div style={{
-          display: 'flex', height: '75%', fontSize: '100px', opacity: '0.1',
+          display: 'flex', height: '75%', fontSize: '100px', opacity: '0.05',
           justifyContent: 'center', alignItems: 'center', userSelect: 'none'
         }}>    
-            No Tasks
+            No task
         </div>
         )}
     </div>
