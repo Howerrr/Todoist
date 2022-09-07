@@ -6,7 +6,7 @@
   margin: 30px 5px;
   padding: 10px 20px;
   border-radius: 10px;
-  user-select: none;
+  -webkit-user-selectuser-select: none;
   box-shadow: 7px 7px 20px #a1a1a1,
     -7px -7px 20px #ffffff;
 }
