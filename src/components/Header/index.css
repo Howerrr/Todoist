@@ -18,12 +18,8 @@
 
 .headbtn {
   transition: all 0.2s ease-in-out;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.todoist:hover .headbtn {
-  opacity: 1;  
   pointer-events: all;
   cursor: pointer;
+  opacity: 1;
 }
+
