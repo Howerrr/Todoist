@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hower454516977.github.io/Retodo",
-  "name": "retodo",
+  "homepage": "https://howerrr.github.io/todoist",
+  "name": "todoist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "backend": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/Hower454516977/Retodo.git -b gh-pages"
+    "deploy": "gh-pages -d build -r https://github.com/Howerrr/todoist.git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
