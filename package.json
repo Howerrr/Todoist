@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "backend": "json-server --watch db.json --port 5000",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/Howerrr/todoist.git -b gh-pages"
+    "deploy": "gh-pages -d build -r https://github.com/howerrr/todoist.git -b gh-pages"
   },
   "eslintConfig": {
     "extends": [
