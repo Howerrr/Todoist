@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/Retodo/static/css/main.63e9a46d.chunk.css",
-    "main.js": "/Retodo/static/js/main.cd1623ad.chunk.js",
-    "main.js.map": "/Retodo/static/js/main.cd1623ad.chunk.js.map",
-    "runtime-main.js": "/Retodo/static/js/runtime-main.03d6d369.js",
-    "runtime-main.js.map": "/Retodo/static/js/runtime-main.03d6d369.js.map",
-    "static/js/2.544fb854.chunk.js": "/Retodo/static/js/2.544fb854.chunk.js",
-    "static/js/2.544fb854.chunk.js.map": "/Retodo/static/js/2.544fb854.chunk.js.map",
-    "index.html": "/Retodo/index.html",
-    "static/css/main.63e9a46d.chunk.css.map": "/Retodo/static/css/main.63e9a46d.chunk.css.map",
-    "static/js/2.544fb854.chunk.js.LICENSE.txt": "/Retodo/static/js/2.544fb854.chunk.js.LICENSE.txt"
+    "main.css": "/todoist/static/css/main.02c2c17c.css",
+    "main.js": "/todoist/static/js/main.e734ccd3.js",
+    "index.html": "/todoist/index.html",
+    "main.02c2c17c.css.map": "/todoist/static/css/main.02c2c17c.css.map",
+    "main.e734ccd3.js.map": "/todoist/static/js/main.e734ccd3.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.03d6d369.js",
-    "static/js/2.544fb854.chunk.js",
-    "static/css/main.63e9a46d.chunk.css",
-    "static/js/main.cd1623ad.chunk.js"
+    "static/css/main.02c2c17c.css",
+    "static/js/main.e734ccd3.js"
   ]
 }
